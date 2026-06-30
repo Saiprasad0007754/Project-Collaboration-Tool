@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { FiBell, FiMenu } from 'react-icons/fi';
 import { APP_NAME } from '@/utils/constants';
+import ProfileDropdown from './ProfileDropdown';
 
 /**
- * Top navigation bar. The user menu / avatar is a placeholder until
- * authentication is implemented.
+ * Top navigation bar.
  */
 const Navbar = ({ onToggleSidebar }) => {
   return (
@@ -31,10 +31,8 @@ const Navbar = ({ onToggleSidebar }) => {
         >
           <FiBell size={20} />
         </button>
-        {/* Placeholder avatar — replace with real user data once auth exists */}
-        <div className="h-9 w-9 rounded-full bg-primary-100 text-center text-sm font-medium leading-9 text-primary-700 dark:bg-primary-900/50 dark:text-primary-300">
-          U
-        </div>
+        {/* Profile avatar + dropdown menu */}
+        <ProfileDropdown />
       </div>
     </header>
   );
