@@ -30,3 +30,31 @@ export const PRIORITY_LEVELS = {
   HIGH: 'high',
   URGENT: 'urgent',
 };
+
+// -----------------------------------------------------------------------------
+// Project Statuses
+// -----------------------------------------------------------------------------
+
+export const PROJECT_STATUSES = {
+  PLANNING: 'planning',
+  ACTIVE: 'active',
+  ON_HOLD: 'on_hold',
+  COMPLETED: 'completed',
+  CANCELLED: 'cancelled',
+};
+
+export const PROJECT_STATUS_LABELS = {
+  [PROJECT_STATUSES.PLANNING]: 'Planning',
+  [PROJECT_STATUSES.ACTIVE]: 'Active',
+  [PROJECT_STATUSES.ON_HOLD]: 'On Hold',
+  [PROJECT_STATUSES.COMPLETED]: 'Completed',
+  [PROJECT_STATUSES.CANCELLED]: 'Cancelled',
+};
+
+export const PROJECT_STATUS_COLORS = {
+  [PROJECT_STATUSES.PLANNING]: 'gray',
+  [PROJECT_STATUSES.ACTIVE]: 'green',
+  [PROJECT_STATUSES.ON_HOLD]: 'yellow',
+  [PROJECT_STATUSES.COMPLETED]: 'blue',
+  [PROJECT_STATUSES.CANCELLED]: 'red',
+};

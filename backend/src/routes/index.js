@@ -1,5 +1,6 @@
 const express = require('express');
 const healthRoutes = require('./health.routes');
+const projectRoutes = require('./project.routes');
 
 const router = express.Router();
 
@@ -11,12 +12,12 @@ const router = express.Router();
  *   router.use('/auth', authRoutes);
  */
 router.use('/health', healthRoutes);
+router.use('/projects', projectRoutes);
 
 // Placeholder routers to be implemented in upcoming phases:
 // router.use('/auth', authRoutes);
 // router.use('/users', userRoutes);
 // router.use('/workspaces', workspaceRoutes);
-// router.use('/projects', projectRoutes);
 // router.use('/boards', boardRoutes);
 // router.use('/tasks', taskRoutes);
 // router.use('/comments', commentRoutes);

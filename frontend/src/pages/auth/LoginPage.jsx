@@ -11,7 +11,7 @@ import {
 import { FiEye, FiEyeOff, FiMail, FiLock } from 'react-icons/fi';
 
 // Adjust this import to match where your Firebase app/auth instance is initialized.
-import { auth } from '@/firebase/firebase';
+import { auth } from '@/firebase/firebaseConfig';
 /**
  * Maps Firebase auth error codes to user-friendly messages.
  * Falls back to the raw Firebase message for anything not mapped.

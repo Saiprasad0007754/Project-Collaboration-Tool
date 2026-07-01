@@ -6,7 +6,7 @@ import { FiUser, FiFolder, FiSettings, FiMoon, FiSun, FiLogOut } from 'react-ico
 
 // Adjust these imports to match where your AuthContext and Firebase auth instance live.
 import useAuth from '@/hooks/useAuth';
-import { auth } from '@/firebase/firebase';
+import { auth } from '@/firebase/firebaseConfig';
 
 const THEME_STORAGE_KEY = 'theme';
 

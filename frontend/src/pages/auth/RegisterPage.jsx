@@ -10,7 +10,7 @@ import {
 import { FiEye, FiEyeOff, FiUser, FiMail, FiLock } from 'react-icons/fi';
 
 // Adjust this import to match where your Firebase app/auth instance is initialized.
-import { auth } from '@/firebase/firebase';
+import { auth } from '@/firebase/firebaseConfig';
 const PASSWORD_REGEX =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
 

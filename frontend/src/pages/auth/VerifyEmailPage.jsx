@@ -5,7 +5,7 @@ import { sendEmailVerification, signOut, onAuthStateChanged } from 'firebase/aut
 import { FiMail, FiRefreshCw, FiLogOut } from 'react-icons/fi';
 
 // Adjust this import to match where your Firebase app/auth instance is initialized.
-import { auth } from '@/firebase/firebase';
+import { auth } from '@/firebase/firebaseConfig';
 const RESEND_COOLDOWN_SECONDS = 60;
 
 /**

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { auth } from "@/firebase/firebaseConfig";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api/v1';
 
@@ -18,13 +19,17 @@ const axiosInstance = axios.create({
 });
 
 // ---------------------------------------------------------------------------
-// Request interceptor
+// Request interceptor — attaches the current Firebase ID token, if any
 // ---------------------------------------------------------------------------
 axiosInstance.interceptors.request.use(
-  (config) => {
-    // Placeholder for attaching an Authorization header once auth exists:
-    // const token = getAccessToken();
-    // if (token) config.headers.Authorization = `Bearer ${token}`;
+  async (config) => {
+    const currentUser = auth.currentUser;
+    if (currentUser) {
+      // getIdToken() returns the cached token and silently refreshes it
+      // in the background if it's close to expiring.
+      const token = await currentUser.getIdToken();
+      config.headers.Authorization = `Bearer ${token}`;
+    }
     return config;
   },
   (error) => Promise.reject(error)
